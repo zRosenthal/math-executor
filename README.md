@@ -1,20 +1,20 @@
-[![Stories in Ready](https://badge.waffle.io/NeonXP/MathExecutor.png?label=ready&title=Ready)](https://waffle.io/NeonXP/MathExecutor)
+[![Stories in Ready](https://badge.waffle.io/NeoZ/MathExecutor.png?label=ready&title=Ready)](https://waffle.io/NeoZ/MathExecutor)
 # MathExecutor
 
-[![Build Status](https://travis-ci.org/NeonXP/MathExecutor.png?branch=master)](https://travis-ci.org/NeonXP/MathExecutor)
+[![Build Status](https://travis-ci.org/NeoZ/MathExecutor.png?branch=master)](https://travis-ci.org/NeoZ/MathExecutor)
 
 Simple math expressions calculator
 
 ## Install via Composer
 
-All instructions to install here: https://packagist.org/packages/nxp/math-executor
+All instructions to install here: https://packagist.org/packages/Z/math-executor
 
 ## Sample usage:
 
 ```php
 require "vendor/autoload.php";
 
-$calculator = new \NXP\MathExecutor();
+$calculator = new \Z\MathExecutor();
 
 print $calculator->execute("1 + 2 * (2 - (4+10))^2 + sin(10)");
 ```
@@ -51,7 +51,7 @@ MyNamespace/ModulusToken.php:
 <?php
 namespace MyNamespace;
 
-use NXP\Classes\Token\AbstractOperator;
+use Z\Classes\Token\AbstractOperator;
 
 class ModulusToken extends AbstractOperator
 {
