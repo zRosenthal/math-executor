@@ -9,11 +9,11 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Exception;
+namespace Z\Exception;
 
 /**
- * @author Vitaliy Zhuk <zhuk2205@gmail.com>
+ * @author Alexander Kiryukhin <alexander@symdev.org>
  */
-class UnknownOperatorException extends \Exception
+class IncorrectBracketsException extends \Exception
 {
 }

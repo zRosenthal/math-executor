@@ -8,13 +8,18 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes\Token;
+namespace Z\Classes\Token;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
  */
-abstract class AbstractOperator implements InterfaceToken, InterfaceOperator
+class TokenRightBracket implements InterfaceToken
 {
-    const RIGHT_ASSOC   = 'RIGHT';
-    const LEFT_ASSOC    = 'LEFT';
+    /**
+     * @return string
+     */
+    public static function getRegex()
+    {
+        return '\)';
+    }
 }

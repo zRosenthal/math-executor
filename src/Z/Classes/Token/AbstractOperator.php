@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This file is part of the MathExecutor package
  *
@@ -9,11 +8,13 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Exception;
+namespace Z\Classes\Token;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
  */
-class UnknownVariableException extends \Exception
+abstract class AbstractOperator implements InterfaceToken, InterfaceOperator
 {
+    const RIGHT_ASSOC   = 'RIGHT';
+    const LEFT_ASSOC    = 'LEFT';
 }

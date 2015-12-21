@@ -8,18 +8,18 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes;
+namespace Z\Classes;
 
-use NXP\Classes\Token\InterfaceToken;
-use NXP\Classes\Token\TokenComma;
-use NXP\Classes\Token\TokenFunction;
-use NXP\Classes\Token\TokenLeftBracket;
-use NXP\Classes\Token\TokenNumber;
-use NXP\Classes\Token\TokenRightBracket;
-use NXP\Classes\Token\TokenVariable;
-use NXP\Exception\UnknownFunctionException;
-use NXP\Exception\UnknownOperatorException;
-use NXP\Exception\UnknownTokenException;
+use Z\Classes\Token\InterfaceToken;
+use Z\Classes\Token\TokenComma;
+use Z\Classes\Token\TokenFunction;
+use Z\Classes\Token\TokenLeftBracket;
+use Z\Classes\Token\TokenNumber;
+use Z\Classes\Token\TokenRightBracket;
+use Z\Classes\Token\TokenVariable;
+use Z\Exception\UnknownFunctionException;
+use Z\Exception\UnknownOperatorException;
+use Z\Exception\UnknownTokenException;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
@@ -54,13 +54,13 @@ class TokenFactory
     /**
      * Add operator
      * @param  string                                  $operatorClass
-     * @throws \NXP\Exception\UnknownOperatorException
+     * @throws \Z\Exception\UnknownOperatorException
      */
     public function addOperator($operatorClass)
     {
         $class = new \ReflectionClass($operatorClass);
 
-        if (!in_array('NXP\Classes\Token\InterfaceToken', $class->getInterfaceNames())) {
+        if (!in_array('Z\Classes\Token\InterfaceToken', $class->getInterfaceNames())) {
             throw new UnknownOperatorException;
         }
 

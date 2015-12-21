@@ -8,19 +8,19 @@
 * file that was distributed with this source code
 */
 
-namespace NXP\Classes\Token;
+namespace Z\Classes\Token;
 
 /**
 * @author Alexander Kiryukhin <alexander@symdev.org>
 */
-class TokenPlus extends AbstractOperator
+class TokenDivision extends AbstractOperator
 {
     /**
      * @return string
      */
     public static function getRegex()
     {
-        return '\+';
+        return '\/';
     }
 
     /**
@@ -28,7 +28,7 @@ class TokenPlus extends AbstractOperator
      */
     public function getPriority()
     {
-        return 1;
+        return 2;
     }
 
     /**
@@ -47,7 +47,7 @@ class TokenPlus extends AbstractOperator
     {
         $op2 = array_pop($stack);
         $op1 = array_pop($stack);
-        $result = $op1->getValue() + $op2->getValue();
+        $result = $op1->getValue() / $op2->getValue();
 
         return new TokenNumber($result);
     }

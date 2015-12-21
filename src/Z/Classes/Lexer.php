@@ -8,17 +8,17 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes;
-use NXP\Classes\Token\AbstractOperator;
-use NXP\Classes\Token\InterfaceOperator;
-use NXP\Classes\Token\TokenComma;
-use NXP\Classes\Token\TokenFunction;
-use NXP\Classes\Token\TokenLeftBracket;
-use NXP\Classes\Token\TokenNumber;
-use NXP\Classes\Token\TokenRightBracket;
-use NXP\Classes\Token\TokenVariable;
-use NXP\Exception\IncorrectBracketsException;
-use NXP\Exception\IncorrectExpressionException;
+namespace Z\Classes;
+use Z\Classes\Token\AbstractOperator;
+use Z\Classes\Token\InterfaceOperator;
+use Z\Classes\Token\TokenComma;
+use Z\Classes\Token\TokenFunction;
+use Z\Classes\Token\TokenLeftBracket;
+use Z\Classes\Token\TokenNumber;
+use Z\Classes\Token\TokenRightBracket;
+use Z\Classes\Token\TokenVariable;
+use Z\Exception\IncorrectBracketsException;
+use Z\Exception\IncorrectExpressionException;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
@@ -38,7 +38,7 @@ class Lexer
     /**
      * @param  string                                      $input Source string of equation
      * @return array                                       Tokens stream
-     * @throws \NXP\Exception\IncorrectExpressionException
+     * @throws \Z\Exception\IncorrectExpressionException
      */
     public function stringToTokensStream($input)
     {
@@ -58,7 +58,7 @@ class Lexer
     /**
      * @param  array                                       $tokensStream Tokens stream
      * @return array                                       Array of tokens in revers polish notation
-     * @throws \NXP\Exception\IncorrectExpressionException
+     * @throws \Z\Exception\IncorrectExpressionException
      */
     public function buildReversePolishNotation($tokensStream)
     {

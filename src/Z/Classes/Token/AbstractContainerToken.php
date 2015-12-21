@@ -8,7 +8,7 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes\Token;
+namespace Z\Classes\Token;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>

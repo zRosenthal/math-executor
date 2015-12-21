@@ -9,11 +9,11 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Exception;
+namespace Z\Exception;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
  */
-class IncorrectBracketsException extends \Exception
+class UnknownVariableException extends \Exception
 {
 }

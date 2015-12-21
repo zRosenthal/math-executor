@@ -8,15 +8,26 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes\Token;
+namespace Z\Classes\Token;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
  */
-interface InterfaceToken
+interface InterfaceOperator
 {
+    /**
+     * @return int
+     */
+    public function getPriority();
+
     /**
      * @return string
      */
-    public static function getRegex();
+    public function getAssociation();
+
+    /**
+     * @param  array       $stack
+     * @return TokenNumber
+     */
+    public function execute(&$stack);
 }

@@ -8,14 +8,14 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes;
+namespace Z\Classes;
 
-use NXP\Classes\Token\InterfaceOperator;
-use NXP\Classes\Token\TokenFunction;
-use NXP\Classes\Token\TokenNumber;
-use NXP\Classes\Token\TokenVariable;
-use NXP\Exception\IncorrectExpressionException;
-use NXP\Exception\UnknownVariableException;
+use Z\Classes\Token\InterfaceOperator;
+use Z\Classes\Token\TokenFunction;
+use Z\Classes\Token\TokenNumber;
+use Z\Classes\Token\TokenVariable;
+use Z\Exception\IncorrectExpressionException;
+use Z\Exception\UnknownVariableException;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
@@ -27,8 +27,8 @@ class Calculator
      * @param  array                                       $tokens    Array of tokens
      * @param  array                                       $variables Array of variables
      * @return number                                      Result
-     * @throws \NXP\Exception\IncorrectExpressionException
-     * @throws \NXP\Exception\UnknownVariableException
+     * @throws \Z\Exception\IncorrectExpressionException
+     * @throws \Z\Exception\UnknownVariableException
      */
     public function calculate($tokens, $variables)
     {

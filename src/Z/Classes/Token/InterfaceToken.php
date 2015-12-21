@@ -8,18 +8,15 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes\Token;
+namespace Z\Classes\Token;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
  */
-class TokenNumber extends AbstractContainerToken
+interface InterfaceToken
 {
     /**
      * @return string
      */
-    public static function getRegex()
-    {
-        return '\-?\d+\.?\d*(E-?\d+)?';
-    }
+    public static function getRegex();
 }

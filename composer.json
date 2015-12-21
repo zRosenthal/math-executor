@@ -1,5 +1,5 @@
 {
-    "name": "nxp/math-executor-z",
+    "name": "z/math-executor-z",
     "description": "Simple math expressions calculator - extension of http://github.com/NeonXP/MathExecutor",
     "minimum-stability": "stable",
     "keywords": ["math","parser","expression","calculator"],

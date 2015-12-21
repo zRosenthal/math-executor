@@ -8,18 +8,18 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes\Token;
+namespace Z\Classes\Token;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
  */
-class TokenVariable extends AbstractContainerToken
+class TokenNumber extends AbstractContainerToken
 {
     /**
      * @return string
      */
     public static function getRegex()
     {
-        return '\$[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*';
+        return '\-?\d+\.?\d*(E-?\d+)?';
     }
 }

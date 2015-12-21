@@ -9,16 +9,16 @@
  * file that was distributed with this source code
  */
 
-namespace NXP;
+namespace Z;
 
-use NXP\Classes\Calculator;
-use NXP\Classes\Lexer;
-use NXP\Classes\Token;
-use NXP\Classes\TokenFactory;
+use Z\Classes\Calculator;
+use Z\Classes\Lexer;
+use Z\Classes\Token;
+use Z\Classes\TokenFactory;
 
 /**
  * Class MathExecutor
- * @package NXP
+ * @package Z
  */
 class MathExecutor
 {
@@ -59,11 +59,11 @@ class MathExecutor
     {
         $this->tokenFactory = new TokenFactory();
 
-        $this->tokenFactory->addOperator('NXP\Classes\Token\TokenPlus');
-        $this->tokenFactory->addOperator('NXP\Classes\Token\TokenMinus');
-        $this->tokenFactory->addOperator('NXP\Classes\Token\TokenMultiply');
-        $this->tokenFactory->addOperator('NXP\Classes\Token\TokenDivision');
-        $this->tokenFactory->addOperator('NXP\Classes\Token\TokenDegree');
+        $this->tokenFactory->addOperator('Z\Classes\Token\TokenPlus');
+        $this->tokenFactory->addOperator('Z\Classes\Token\TokenMinus');
+        $this->tokenFactory->addOperator('Z\Classes\Token\TokenMultiply');
+        $this->tokenFactory->addOperator('Z\Classes\Token\TokenDivision');
+        $this->tokenFactory->addOperator('Z\Classes\Token\TokenDegree');
 
         $this->tokenFactory->addFunction('sin', 'sin');
         $this->tokenFactory->addFunction('cos', 'cos');

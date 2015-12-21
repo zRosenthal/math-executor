@@ -8,19 +8,19 @@
 * file that was distributed with this source code
 */
 
-namespace NXP\Classes\Token;
+namespace Z\Classes\Token;
 
 /**
 * @author Alexander Kiryukhin <alexander@symdev.org>
 */
-class TokenDegree extends AbstractOperator
+class TokenMultiply extends AbstractOperator
 {
     /**
      * @return string
      */
     public static function getRegex()
     {
-        return '\^';
+        return '\*';
     }
 
     /**
@@ -28,7 +28,7 @@ class TokenDegree extends AbstractOperator
      */
     public function getPriority()
     {
-        return 3;
+        return 2;
     }
 
     /**
@@ -36,7 +36,7 @@ class TokenDegree extends AbstractOperator
      */
     public function getAssociation()
     {
-        return self::RIGHT_ASSOC;
+        return self::LEFT_ASSOC;
     }
 
     /**
@@ -47,7 +47,7 @@ class TokenDegree extends AbstractOperator
     {
         $op2 = array_pop($stack);
         $op1 = array_pop($stack);
-        $result = pow($op1->getValue(), $op2->getValue());
+        $result = $op1->getValue() * $op2->getValue();
 
         return new TokenNumber($result);
     }

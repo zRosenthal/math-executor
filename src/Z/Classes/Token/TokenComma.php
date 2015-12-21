@@ -8,18 +8,18 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes\Token;
+namespace Z\Classes\Token;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
  */
-class TokenLeftBracket implements InterfaceToken
+class TokenComma implements InterfaceToken
 {
     /**
      * @return string
      */
     public static function getRegex()
     {
-        return '\(';
+        return '\,';
     }
 }

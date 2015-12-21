@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the MathExecutor package
  *
@@ -8,18 +9,11 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes\Token;
+namespace Z\Exception;
 
 /**
- * @author Alexander Kiryukhin <alexander@symdev.org>
+ * @author Vitaliy Zhuk <zhuk2205@gmail.com>
  */
-class TokenComma implements InterfaceToken
+class UnknownFunctionException extends \Exception
 {
-    /**
-     * @return string
-     */
-    public static function getRegex()
-    {
-        return '\,';
-    }
 }

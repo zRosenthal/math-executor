@@ -8,26 +8,18 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes\Token;
+namespace Z\Classes\Token;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
  */
-interface InterfaceOperator
+class TokenLeftBracket implements InterfaceToken
 {
-    /**
-     * @return int
-     */
-    public function getPriority();
-
     /**
      * @return string
      */
-    public function getAssociation();
-
-    /**
-     * @param  array       $stack
-     * @return TokenNumber
-     */
-    public function execute(&$stack);
+    public static function getRegex()
+    {
+        return '\(';
+    }
 }

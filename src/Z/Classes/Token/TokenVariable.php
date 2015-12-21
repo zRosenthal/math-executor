@@ -8,16 +8,18 @@
  * file that was distributed with this source code
  */
 
-namespace NXP\Classes\Token;
+namespace Z\Classes\Token;
 
 /**
  * @author Alexander Kiryukhin <alexander@symdev.org>
  */
-interface InterfaceFunction
+class TokenVariable extends AbstractContainerToken
 {
     /**
-     * @param array $stack
-     * @return $this
+     * @return string
      */
-    public function execute(&$stack);
+    public static function getRegex()
+    {
+        return '\$[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*';
+    }
 }
