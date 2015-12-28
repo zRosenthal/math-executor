@@ -81,6 +81,8 @@ class MathExecutor
         //for AB_P02
         $this->tokenFactory->addFunction('Fdeg', function($arg1, $arg2, $arg3) {return ($arg1 === abs($arg1)) ? $arg2 : $arg3;} , 3);
 
+        $this->tokenFactory->addFunction('abs', 'abs');
+
         $this->setVars(array(
             'pi' => 3.14159265359,
             'e'  => 2.71828182846
