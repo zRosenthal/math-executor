@@ -3,7 +3,6 @@
     "description": "Simple math expressions calculator - extension of http://github.com/NeonXP/MathExecutor",
     "minimum-stability": "stable",
     "keywords": ["math","parser","expression","calculator"],
-    "homepage": "http://github.com/NeonXP/MathExecutor",
     "license": "GPLv2",
     "authors": [
         {
