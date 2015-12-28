@@ -1,7 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/NeoZ/MathExecutor.png?label=ready&title=Ready)](https://waffle.io/NeoZ/MathExecutor)
-# MathExecutor
-
-[![Build Status](https://travis-ci.org/NeoZ/MathExecutor.png?branch=master)](https://travis-ci.org/NeoZ/MathExecutor)
 
 Simple math expressions calculator
 
