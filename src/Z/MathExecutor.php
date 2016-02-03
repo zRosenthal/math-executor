@@ -79,7 +79,7 @@ class MathExecutor
         $this->tokenFactory->addFunction('avg', function($arg1, $arg2) { return ($arg1 + $arg2) / 2; }, 2);
 
         //for AB_P02
-        $this->tokenFactory->addFunction('Fdeg', function($arg1, $arg2, $arg3) {return ($arg1 === abs($arg1)) ? $arg2 : $arg3;} , 3);
+        $this->tokenFactory->addFunction('pTwo', function($arg1, $arg2, $arg3) { return ($arg1 > 0) ? $arg2 : $arg3; } , 3);
 
         $this->tokenFactory->addFunction('abs', 'abs');
 
