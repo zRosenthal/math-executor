@@ -45,11 +45,12 @@ class Lexer
         $matches = array();
         preg_match_all($this->tokenFactory->getTokenParserRegex(), $input, $matches);
         $tokenFactory = $this->tokenFactory;
+        $matches = array_diff( $matches[0], [""]);
         $tokensStream = array_map(
             function ($token) use ($tokenFactory) {
                 return $tokenFactory->createToken($token);
             },
-            $matches[0]
+            $matches
         );
 
         return $tokensStream;
