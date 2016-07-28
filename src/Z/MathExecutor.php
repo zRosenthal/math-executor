@@ -83,6 +83,8 @@ class MathExecutor
 
         $this->tokenFactory->addFunction('abs', 'abs');
 
+        $this->tokenFactory->addFunction('exp', 'exp');
+
         $this->setVars(array(
             'pi' => 3.14159265359,
             'e'  => 2.71828182846
@@ -190,7 +192,7 @@ class MathExecutor
 
         //weird issue if simple operation isn't first, also change pi to number
         //variables don't work for some reason
-        $expression = "1 - 1 + " . str_replace('pi', '3.14159265359', $expression);
+        $expression = "1 - 1 + " . str_replace('pi', '3.1415926535898', $expression);
 
         if (!array_key_exists($expression, $this->cache)) {
             $lexer = new Lexer($this->tokenFactory);
