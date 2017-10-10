@@ -11,9 +11,10 @@
 
 namespace NXP\Tests;
 
-use \NXP\MathExecutor;
+use \Z\MathExecutor;
+use PHPUnit\Framework\TestCase;
 
-class MathTest extends \PHPUnit_Framework_TestCase
+class MathTest extends TestCase
 {
     /**
      * @dataProvider providerExpressions
@@ -27,7 +28,7 @@ class MathTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($calculator->execute($expression), $phpResult);
     }
 
-    /**
+     /**
      * Expressions data provider
      */
     public function providerExpressions()
@@ -61,5 +62,27 @@ class MathTest extends \PHPUnit_Framework_TestCase
             array('100500 * 3.5E5'),
             array('100500 * 3.5E-5')
         );
+    }
+
+    /**
+     * @dataProvider providerOperations
+     */
+    public function testOperations($eval, $execute) {
+        $calculator = new MathExecutor();
+
+        /** @var float $phpResult */
+        eval('$phpResult = ' . $eval . ';');
+        $this->assertEquals($calculator->execute($execute), $phpResult);
+    }
+
+    /**
+     * Operations data provider
+     */
+    public function providerOperations() {
+        return [
+            ['eval' => 'log(5)', 'execute' => 'ln(5)'],
+            ['eval' => 'log10(5)', 'execute' => 'log(5)'],
+            ['eval' => 'log(exp(5))', 'execute' => 'ln(exp(5))']
+        ];
     }
 }

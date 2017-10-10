@@ -84,6 +84,8 @@ class MathExecutor
         $this->tokenFactory->addFunction('abs', 'abs');
 
         $this->tokenFactory->addFunction('exp', 'exp');
+        $this->tokenFactory->addFunction('ln', 'log');
+        $this->tokenFactory->addFunction('log', 'log10');
 
         $this->setVars(array(
             'pi' => 3.14159265359,
